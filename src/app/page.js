@@ -10,7 +10,7 @@ export default function Home() {
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(true)
 
-  const fetcher = (url, cb) =>
+  const fetcher = async (url, cb) =>
     fetch(url, {})
       .then(e => e.json())
       .then(e => {
